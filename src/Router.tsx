@@ -22,8 +22,8 @@ const router = createBrowserRouter([
       {
         path: "users/:userId",
         element: <User />,
+        children: [{ path: "follwers", element: <Follwers /> }],
       },
-      { path: "follwers", element: <Follwers /> },
     ],
     errorElement: <NotFound />,
   },
