@@ -3,6 +3,8 @@ import { createBrowserRouter } from "react-router-dom";
 import Home from "./screens/Home";
 import About from "./screens/About";
 import Root from "./Root";
+import ErrorComponent from "./componenets/ErrorComponent";
+import NotFound from "./screens/NotFound";
 
 const router = createBrowserRouter([
   {
@@ -12,9 +14,11 @@ const router = createBrowserRouter([
       {
         path: "",
         element: <Home />,
+        errorElement: <ErrorComponent />,
       },
       { path: "about", element: <About /> },
     ],
+    errorElement: <NotFound />,
   },
 ]);
 
